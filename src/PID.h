@@ -29,7 +29,9 @@ class PID {
    * Calculate the total PID error.
    * @output The total PID error
    */
-  double TotalError();
+  //double TotalError();
+
+  double Steer(double cte);
 
  private:
   /**
@@ -45,6 +47,12 @@ class PID {
   double Kp;
   double Ki;
   double Kd;
+
+  int count;
+  double best_err;
+  double total_cte;
+  double prev_cte;
+  //bool flag;
 };
 
 #endif  // PID_H
