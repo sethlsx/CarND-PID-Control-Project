@@ -28,7 +28,7 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
   PID::Ki += PID::i_error;
   PID::Kd += PID::d_error;
 
-  PID::best_err = std::numeric_limits<double>::max();
+  PID::best_err = 999999999999999.0;
   PID::count = 1;
   PID::total_cte = 0;
 
